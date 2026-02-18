@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MagicCal — Web 魔术计算器</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="phone">
+            <button id="settingsBtn" class="settings-btn" aria-label="设置">⚙</button>
+
+            <div id="targetBox" class="target-box">
+                <div id="targetNumeric">202602181734</div>
+                <div id="targetHuman">2026年02月18号17点34分</div>
+                <button id="hideTargetBtn" class="tiny">隐藏目标</button>
+            </div>
+
+            <div id="display" class="display">0</div>
+
+            <div class="keys">
+                <button class="key" data-key="7">7</button>
+                <button class="key" data-key="8">8</button>
+                <button class="key" data-key="9">9</button>
+                <button class="key op" id="plus">+</button>
+
+                <button class="key" data-key="4">4</button>
+                <button class="key" data-key="5">5</button>
+                <button class="key" data-key="6">6</button>
+                <button class="key clear" id="clear">C</button>
+
+                <button class="key" data-key="1">1</button>
+                <button class="key" data-key="2">2</button>
+                <button class="key" data-key="3">3</button>
+                <button class="key op" id="equals">=</button>
+
+                <button class="key wide" data-key="0">0</button>
+                <button class="key" aria-hidden="true" disabled></button>
+                <button class="key" aria-hidden="true" disabled></button>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- 简单设置目标的弹窗（隐藏） -->
+    <div id="setTargetModal" class="modal hidden">
+        <div class="modal-content">
+            <h3>设置目标时间</h3>
+            <input id="dtInput" type="datetime-local" />
+            <div class="modal-actions">
+                <button id="saveTarget">保存</button>
+                <button id="cancelTarget">取消</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
